@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'home-tab',
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  ngOnInit() {
+  
+  }
   tintColor: string = '#108ee9';
   unselectedTintColor: string = '#888';
   tabbarStyle: object = { position: 'fixed',
