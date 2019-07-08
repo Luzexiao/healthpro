@@ -11,5 +11,5 @@ export class HealthDataComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  index = 0;
 }

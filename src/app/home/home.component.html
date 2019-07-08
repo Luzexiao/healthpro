@@ -8,14 +8,14 @@
             <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg') center center / 21px 21px no-repeat;">
             </div>
         </ng-template>
-        <div style="background-color: white; height: 100%; text-align: center">
+        <!-- <div style="background-color: white; height: 100%; text-align: center">
             <div style="padding-top: 60px">Clicked Life tab， show Life information</div>
             <ng-container>
                 <ng-template [ngTemplateOutlet]="content"></ng-template>
             </ng-container>
-        </div>
+        </div> -->
     </TabBarItem>
-    <TabBarItem [title]="'亲友圈'" [key]="3" [dot]="true" [icon]="icon3" [selectedIcon]="icon33">
+    <TabBarItem [title]="'亲友圈'" [key]="2" [dot]="true" [icon]="icon3" [selectedIcon]="icon33">
         <ng-template #icon3>
             <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg') center center / 21px 21px no-repeat;">
             </div>
@@ -24,14 +24,14 @@
             <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg') center center / 21px 21px no-repeat;">
             </div>
         </ng-template>
-        <div style="background-color: white; height: 100%; text-align: center">
+        <!-- <div style="background-color: white; height: 100%; text-align: center">
             <div style="padding-top: 60px">Clicked Friend tab， show Friend information</div>
             <ng-container>
                 <ng-template [ngTemplateOutlet]="content"></ng-template>
             </ng-container>
-        </div>
+        </div> -->
     </TabBarItem>
-    <TabBarItem [title]="'个人中心'" [key]="4" [icon]="icon4" [selectedIcon]="icon44">
+    <TabBarItem [title]="'个人中心'" [key]="3" [icon]="icon4" [selectedIcon]="icon44">
         <ng-template #icon4>
             <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg') center center / 21px 21px no-repeat;">
             </div>
@@ -40,14 +40,15 @@
             <div style="width:22px;height: 22px;background: url('https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg') center center / 21px 21px no-repeat;">
             </div>
         </ng-template>
-        <div style="background-color: white; height: 100%; text-align: center">
+        <!-- <div style="background-color: white; height: 100%; text-align: center">
             <div style="padding-top: 60px">Clicked My tab， show My information</div>
             <ng-container>
                 <ng-template [ngTemplateOutlet]="content"></ng-template>
             </ng-container>
-        </div>
+        </div> -->
     </TabBarItem>
 </TabBar>
-<ng-template #content>
+<!-- <ng-template #content>
 
-</ng-template>
+</ng-template> -->
+<router-outlet></router-outlet>

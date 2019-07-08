@@ -1,21 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'home-tab',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
   ngOnInit() {
-  
+
   }
   tintColor: string = '#108ee9';
   unselectedTintColor: string = '#888';
-  tabbarStyle: object = { position: 'fixed',
-          height: '100%',
-          width: '100%',
-          top: 0 };
-  selectedIndex: number = 1;
+  tabbarStyle: object = {
+    position: 'fixed',
+    height: '100%',
+    width: '100%',
+    top: 0
+  };
+  selectedIndex: number = 0;
   tabBarTabOnPress(pressParam: any) {
-    console.log('onPress Params: ', pressParam);
+    switch (pressParam.index) {
+      case 0:
+        this.router.navigate(["home/healthData"]);
+        break;
+      case 1:
+        this.router.navigate(["home/relatives"]);
+        break;
+      case 2:
+        this.router.navigate(["home/userCenter"]);
+        break;
+    }
     this.selectedIndex = pressParam.index;
   }
 }
