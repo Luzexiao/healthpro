@@ -1,34 +1,10 @@
-<div style="height:45px;">
-    <Tabs [activeTab]="index" [page]="3" [prerenderingSiblingsNumber]="2" (onChange)="selectCard($event)" (onTabClick)="selectCard($event)">
-        <TabPane [title]="'1st Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 1st tab
-            </div>
-        </TabPane>
-        <TabPane [title]="'2nd Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 2nd tab
-            </div>
-        </TabPane>
-        <TabPane [title]="'3rd Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 3rd tab
-            </div>
-        </TabPane>
-        <TabPane [title]="'4rd Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 4rd tab
-            </div>
-        </TabPane>
-        <TabPane [title]="'5rd Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 5rd tab
-            </div>
-        </TabPane>
-        <TabPane [title]="'6rd Tab'">
-            <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
-                Content of 6rd tab
-            </div>
-        </TabPane>
-    </Tabs>
-</div>
+<Tabs style="height:auto" [activeTab]="index" [page]="3" [prerenderingSiblingsNumber]="2" (onChange)="selectCard($event)" (onTabClick)="selectCard($event)">
+    <TabPane [title]="'血压'">
+    </TabPane>
+    <TabPane [title]="'三合一'">
+    </TabPane>
+    <TabPane [title]="'步数'">
+    </TabPane>
+    <TabPane [title]="'睡眠'">
+    </TabPane>
+</Tabs>
