@@ -16,10 +16,10 @@ export class HealthDataComponent implements OnInit {
           trigger: 'axis'
       },
       legend: {
-          color: ["#F58080", "#47D8BE", "#F9A589"],
-          data: ['新报', '流失', '续费'],
+          color: ["#F58080", "#47D8BE"],
+          data: ['收缩压', '舒张压'],
           left: 'center',
-          bottom: 'bottom'
+          bottom: '3%'
       },
       grid: {
           top: 'middle',
@@ -40,7 +40,7 @@ export class HealthDataComponent implements OnInit {
       },
       yAxis: {
           type: 'value',
-  
+          name:'血压平均值',
           splitLine: {
               lineStyle: {
                   type: 'dashed',
@@ -61,7 +61,7 @@ export class HealthDataComponent implements OnInit {
           }
       },
       series: [{
-              name: '新报',
+              name: '收缩压',
               type: 'line',
               data: [800,900,220,130,660,289],
               color: "#F58080",
@@ -100,7 +100,7 @@ export class HealthDataComponent implements OnInit {
               smooth: true
           },
           {
-              name: '流失',
+              name: '舒张压',
               type: 'line',
               data: [123,568,111,222,123,56],
               lineStyle: {
@@ -135,46 +135,6 @@ export class HealthDataComponent implements OnInit {
                       /*shadowColor: 'rgba(72,216,191, 0.3)',
                        shadowBlur: 100,*/
                       borderColor: "#AAF487"
-                  }
-              },
-              smooth: true
-          },
-          {
-              name: '续费',
-              type: 'line',
-              data: [125,568,25,36,784,56],
-              lineStyle: {
-                  normal: {
-                      width: 5,
-                      color: {
-                          type: 'linear',
-  
-                          colorStops: [{
-                                  offset: 0,
-                                  color: '#F6D06F' // 0% 处的颜色
-                              },
-                              {
-                                  offset: 0.4,
-                                  color: '#F9A589' // 100% 处的颜色
-                              }, {
-                                  offset: 1,
-                                  color: '#F9A589' // 100% 处的颜色
-                              }
-                          ],
-                          globalCoord: false // 缺省为 false
-                      },
-                      shadowColor: 'rgba(249,165,137, 0.5)',
-                      shadowBlur: 10,
-                      shadowOffsetY: 7
-                  }
-              },
-              itemStyle: {
-                  normal: {
-                      color: '#F6D06F',
-                      borderWidth: 10,
-                      /*shadowColor: 'rgba(72,216,191, 0.3)',
-                       shadowBlur: 100,*/
-                      borderColor: "#F6D06F"
                   }
               },
               smooth: true

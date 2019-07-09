@@ -3,5 +3,6 @@
 }
 
 .demo-chart {
-    height: 400px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0)
 }
