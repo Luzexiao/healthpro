@@ -1,5 +1,3 @@
-<router-outlet>
-</router-outlet>
 <TabBar [barTintColor]="'white'" [tintColor]="tintColor" [unselectedTintColor]="unselectedTintColor" [ngStyle]="tabbarStyle" [activeTab]="selectedIndex" (onPress)="tabBarTabOnPress($event)">
     <TabBarItem [title]="'健康管理'" [key]="1" [icon]="icon1" [selectedIcon]="icon11">
         <ng-template #icon1>
@@ -32,3 +30,4 @@
         </ng-template>
     </TabBarItem>
 </TabBar>
+<router-outlet></router-outlet>

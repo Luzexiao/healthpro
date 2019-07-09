@@ -6,17 +6,19 @@ import { UserCenterComponent } from './user-center/user-center.component';
 import { RelativesComponent } from './relatives/relatives.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,
-    children:[
-    { path: '', component : HealthDataComponent },
-    { path: 'healthData', component : HealthDataComponent },
-    { path: 'userCenter', component : UserCenterComponent },
-    { path: 'relatives', component : RelativesComponent }
-  ] },
+  {
+    path: 'home', component: HomeComponent,
+    children: [
+      { path: '', component: HealthDataComponent },
+      { path: 'healthData', component: HealthDataComponent },
+      { path: 'userCenter', component: UserCenterComponent },
+      { path: 'relatives', component: RelativesComponent }
+    ]
+  },
 ];
- 
+
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

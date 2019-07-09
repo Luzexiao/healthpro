@@ -1,10 +1,22 @@
-<Tabs style="height:auto" [activeTab]="index" [page]="3" [prerenderingSiblingsNumber]="2" (onChange)="selectCard($event)" (onTabClick)="selectCard($event)">
+<Tabs style="height: auto;" [activeTab]="index" [page]="3" (onChange)="onChange($event)" (onTabClick)="onTabClick($event)">
     <TabPane [title]="'血压'">
+        <div style="display: flex; align-items: center; justify-content: center;background-color: rgb(255, 255, 255);">
+            <div echarts [options]="chartOption" class="demo-chart" style="width: 100%; height:400px"></div>
+        </div>
     </TabPane>
     <TabPane [title]="'三合一'">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: rgb(255, 255, 255);">
+            Content of second tab
+        </div>
     </TabPane>
     <TabPane [title]="'步数'">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: rgb(255, 255, 255);">
+            Content of third tab
+        </div>
     </TabPane>
     <TabPane [title]="'睡眠'">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: rgb(255, 255, 255);">
+            Content of third tab
+        </div>
     </TabPane>
 </Tabs>
