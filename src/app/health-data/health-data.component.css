@@ -3,6 +3,31 @@
 }
 
 .demo-chart {
-    height: 300px;
-    background: rgba(0, 0, 0, 0)
+    width: 100%;
+    height: 200px;
+}
+
+.blackSpace {
+    width: 100%;
+    height: 10px;
+    background-color: #F6F6FA;
+}
+
+.tabContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.bloodList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 300px;
+    height: auto;
+    width: 100%;
+    border-radius: 4px;
 }

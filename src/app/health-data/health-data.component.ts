@@ -6,11 +6,93 @@ import { Router } from '@angular/router';
   styleUrls: ['./health-data.component.css']
 })
 export class HealthDataComponent implements OnInit {
+  isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(window.navigator.userAgent);
+  pageLimit = 10;
+  public directionCount = 0;
+  page = 0;
+  state = {
+    refreshState: {
+      currentState: 'deactivate',
+      drag: false
+    },
+    direction: '',
+    endReachedRefresh: false,
+    height: 500,
+    data: [],
+    directionName: 'both up and down'
+  };
+  dtPullToRefreshStyle = { height: this.state.height + 'px' };
   constructor(
     private router: Router,
   ) { }
   chartOption: any;
+  thumbStyle = {
+    width: '24px',
+    height: '24px'
+  };
+  onClick() {
+    this.directionCount ++;
+    switch (this.directionCount) {
+      case 0:
+        this.state.direction = '';
+        this.state.directionName = 'both up and down';
+      break;
+      case 1:
+        this.state.direction = 'down';
+        this.state.endReachedRefresh = true;
+        this.state.directionName = 'down';
+      break;
+      case 2:
+        this.state.direction = 'up';
+        this.state.directionName = 'up';
+      break;
+      default:
+      this.directionCount = 0;
+      this.state.direction = '';
+      this.state.directionName = 'both up and down';
+        break;
+    }
+  }
+
+  pullToRefresh(event) {
+    if (event === 'endReachedRefresh') {
+        if (this.page < 9) {
+          this.page++;
+          this.addItems(this.page * this.pageLimit);
+          this.state.refreshState.currentState = 'release';
+          setTimeout(() => {
+            this.state.refreshState.currentState = 'finish';
+          }, 1000);
+        }
+    } else {
+       if (event === 'down') {
+        this.state.data = [];
+        this.page = 0;
+        this.addItems(0);
+      } else {
+        if (this.page < 9) {
+          this.page++;
+          this.addItems(this.page * this.pageLimit);
+        }
+      }
+    }
+  }
+
+  addItems(startIndex) {
+    for (let i = startIndex; i < this.pageLimit * (this.page + 1); i++) {
+      this.state.data.push(i);
+    }
+  }
+
+  genData() {
+    const dataArr = [];
+    for (let i = 0; i < 100; i++) {
+      dataArr.push(i);
+    }
+    return dataArr;
+  }
   ngOnInit() {
+    this.addItems(0);
     this.chartOption = {
       tooltip: {
         trigger: 'axis'
