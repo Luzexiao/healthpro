@@ -38,8 +38,8 @@
     border-radius: 5px;
     margin-bottom: 15px;
     height: 65px;
-    width: calc(100% - 30px);
-    margin-left: 15px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
     -moz-box-shadow: 0px 0px 10px #C7C7C7;
     -webkit-box-shadow: 0px 0px 10px #C7C7C7;
     box-shadow: 0px 0px 10px #C7C7C7;
@@ -53,7 +53,7 @@
 }
 
 .blooditem>.itemicon {
-    padding: 15px;
+    padding: 10px;
 }
 
 .itemRight>.itemContent {
@@ -71,14 +71,24 @@
 
 .itemContent>span {
     display: inline-block;
-    width: 120px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #333;
     text-align: center;
 }
 
 .itemContent>span:first-child {
     text-align: left;
+    width: 120px;
+}
+
+.itemContent>span:nth-child(2) {
+    text-align: center;
+    width: 70px;
+}
+
+.itemContent>span:last-child {
+    text-align: center;
+    width: 100px;
 }
 
 .contenttitle {
