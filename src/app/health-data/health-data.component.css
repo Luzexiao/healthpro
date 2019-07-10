@@ -17,33 +17,76 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
 }
 
 .bloodList {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
     align-items: center;
+    width: calc(100%);
     border-radius: 4px;
-  margin:10px;
 }
-.blooditem{
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  width:calc(100%);
-  background-color:#fff;
-  border-radius:4px;
-  margin-bottom:10px;
+
+.blooditem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    height: 65px;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    -moz-box-shadow: 0px 0px 10px #C7C7C7;
+    -webkit-box-shadow: 0px 0px 10px #C7C7C7;
+    box-shadow: 0px 0px 10px #C7C7C7;
 }
-.blooditem>.itemRight{
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+
+.blooditem>.itemRight {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 2;
 }
-.itemRight>.itemContent{
-  align-items: center;
+
+.blooditem>.itemicon {
+    padding: 15px;
+}
+
+.itemRight>.itemContent {
+    align-items: center;
+}
+
+.itemRight>.itemTime {
+    display: inline-block;
+    font-size: 0.8rem;
+    width: 120px;
+    text-align: left;
+    padding-bottom: 8px;
+    color: rgb(0, 0, 0, 0.6);
+}
+
+.itemContent>span {
+    display: inline-block;
+    width: 120px;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.itemContent>span:first-child {
+    text-align: left;
+}
+
+.contenttitle {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    color: #333;
+    line-height: 40px;
+    font-weight: bold;
 }
