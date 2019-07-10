@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
   unselectedTintColor: string = '#888';
   tabbarStyle: object = {
     position: 'fixed',
-    height: '100%',
+    height: '45px',
     width: '100%',
-    top: 0
+    bottom:0
   };
   selectedIndex: number = 0;
   tabBarTabOnPress(pressParam: any) {

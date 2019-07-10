@@ -1,33 +1,35 @@
-<TabBar [barTintColor]="'white'" [tintColor]="tintColor" [unselectedTintColor]="unselectedTintColor" [ngStyle]="tabbarStyle" [activeTab]="selectedIndex" (onPress)="tabBarTabOnPress($event)">
-    <TabBarItem [title]="'健康管理'" [key]="1" [icon]="icon1" [selectedIcon]="icon11">
-        <ng-template #icon1>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/health.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-        <ng-template #icon11>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/healthSelected.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-    </TabBarItem>
-    <TabBarItem [title]="'亲友圈'" [key]="2" [icon]="icon3" [selectedIcon]="icon33">
-        <ng-template #icon3>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/relatives.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-        <ng-template #icon33>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/relativesSelected.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-    </TabBarItem>
-    <TabBarItem [title]="'个人中心'" [key]="3" [icon]="icon4" [selectedIcon]="icon44">
-        <ng-template #icon4>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/user.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-        <ng-template #icon44>
-            <div style="width:22px;height: 22px;background: url('../../assets/images/userSelected.png') center center / 21px 21px no-repeat;">
-            </div>
-        </ng-template>
-    </TabBarItem>
-</TabBar>
 <router-outlet></router-outlet>
+<div style="z-index:10">
+    <TabBar [barTintColor]="'white'" [tintColor]="tintColor" [unselectedTintColor]="unselectedTintColor" [ngStyle]="tabbarStyle" [activeTab]="selectedIndex" (onPress)="tabBarTabOnPress($event)">
+        <TabBarItem [title]="'健康管理'" [key]="1" [icon]="icon1" [selectedIcon]="icon11">
+            <ng-template #icon1>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/health.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+            <ng-template #icon11>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/healthSelected.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+        </TabBarItem>
+        <TabBarItem [title]="'亲友圈'" [key]="2" [icon]="icon3" [selectedIcon]="icon33">
+            <ng-template #icon3>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/relatives.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+            <ng-template #icon33>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/relativesSelected.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+        </TabBarItem>
+        <TabBarItem [title]="'个人中心'" [key]="3" [icon]="icon4" [selectedIcon]="icon44">
+            <ng-template #icon4>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/user.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+            <ng-template #icon44>
+                <div style="width:22px;height: 22px;background: url('../../assets/images/userSelected.png') center center / 21px 21px no-repeat;">
+                </div>
+            </ng-template>
+        </TabBarItem>
+    </TabBar>
+</div>
