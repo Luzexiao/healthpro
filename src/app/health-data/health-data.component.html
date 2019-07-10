@@ -4,7 +4,7 @@
             <div echarts [options]="chartOption" class="demo-chart"></div>
             <div class="blackSpace"></div>
             <div class="bloodList">
-                <PullToRefresh style="width:100%;" [ngStyle]="dtPullToRefreshStyle" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
+                <PullToRefresh style="width:100%;" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
                     <span class="contenttitle">测量结果</span>
                     <div class="blooditem" *ngFor="let i of this.state.data">
                         <Icon class="itemicon" [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
