@@ -19,17 +19,31 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgb(255, 255, 255);
-    margin: 10px;
-    height: calc(100% - 100px);
-    overflow: auto;
 }
 
 .bloodList {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 300px;
-    height: calc(20vw);
     width: 100%;
+    align-items: center;
     border-radius: 4px;
+  margin:10px;
+}
+.blooditem{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  width:calc(100%);
+  background-color:#fff;
+  border-radius:4px;
+  margin-bottom:10px;
+}
+.blooditem>.itemRight{
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemRight>.itemContent{
+  align-items: center;
 }

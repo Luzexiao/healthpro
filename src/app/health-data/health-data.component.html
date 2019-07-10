@@ -1,46 +1,42 @@
 <Tabs style="height: auto;" [activeTab]="index" [page]="3">
-    <TabPane [title]="'血压'">
-        <div class="tabContent">
-            <div echarts [options]="chartOption" class="demo-chart"></div>
-            <div class="blackSpace"></div>
-            <div class="bloodList">
-                <PullToRefresh [ngStyle]="dtPullToRefreshStyle" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
-                    <!-- <div *ngFor="let i of this.state.data" style="text-align: center; padding: 20px">{{i}}</div> -->
-                    <Card *ngFor="let i of this.state.data">
-                        <CardHeader [title]="'2019-07-09'" [thumb]="'../../assets/images/calender.png'" [thumbStyle]="thumbStyle" [extra]="extra">
-                            <!-- <ng-template #extra>
-                                    <span>2019-07-09</span>
-                                </ng-template> -->
-                        </CardHeader>
-                        <CardBody>
-                            <div>This is content of Card {{i}}</div>
-                        </CardBody>
-                        <!-- <CardFooter [content]="'footer content'" [extra]="footerExtra">
-                                <ng-template #footerExtra>
-                                    <div>extra footer content</div>
-                                </ng-template>
-                            </CardFooter> -->
-                    </Card>
-                </PullToRefresh>
-                <ng-template #loading>
-                    <Icon type="loading"></Icon>
-                </ng-template>
+	<TabPane [title]="'血压'">
+		<div class="tabContent">
+			<div echarts [options]="chartOption" class="demo-chart"></div>
+			<div class="blackSpace"></div>
+			<div class="bloodList">
+				<PullToRefresh [ngStyle]="dtPullToRefreshStyle" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh"
+				 (onRefresh)="pullToRefresh($event)">
+					<div class="blooditem" *ngFor="let i of this.state.data">
+            <Icon [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
+            <div class="itemRight">
+              <span class="itemTime">2019.08.09 19:00</span>
+              <div class="itemContent">
+                <span>133/100mmhg</span>
+                <span>88bpm</span>
+                <span>2级高血压</span>
+              </div>
             </div>
-        </div>
-    </TabPane>
-    <TabPane [title]="'三合一'">
-        <div class="tabContent">
-            Content of second tab
-        </div>
-    </TabPane>
-    <TabPane [title]="'步数'">
-        <div class="tabContent">
-            Content of third tab
-        </div>
-    </TabPane>
-    <TabPane [title]="'睡眠'">
-        <div class="tabContent">
-            Content of third tab
-        </div>
-    </TabPane>
+          </div>
+				</PullToRefresh>
+				<ng-template #loading>
+					<Icon type="loading"></Icon>
+				</ng-template>
+			</div>
+		</div>
+	</TabPane>
+	<TabPane [title]="'三合一'">
+		<div class="tabContent">
+			Content of second tab
+		</div>
+	</TabPane>
+	<TabPane [title]="'步数'">
+		<div class="tabContent">
+			Content of third tab
+		</div>
+	</TabPane>
+	<TabPane [title]="'睡眠'">
+		<div class="tabContent">
+			Content of third tab
+		</div>
+	</TabPane>
 </Tabs>
