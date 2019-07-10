@@ -17,7 +17,7 @@ export class HealthDataComponent implements OnInit {
     },
     direction: '',
     endReachedRefresh: false,
-    height: 500,
+    height: 300,
     data: [],
     directionName: 'both up and down'
   };
