@@ -7,6 +7,60 @@ import { Router } from '@angular/router';
 })
 export class HealthDataComponent implements OnInit {
   isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(window.navigator.userAgent);
+  right = [
+    {
+      text: 'Cancel',
+      onPress: () => console.log('cancel'),
+      style: { backgroundColor: '#ddd', color: 'white' }
+    },
+    {
+      text: 'Delete',
+      onPress: () => console.log('delete'),
+      className: 'btnClass'
+    }
+  ];
+
+  rightDifferentWidth = [
+    {
+      text: 'short',
+      onPress: () => console.log('cancel'),
+      style: { backgroundColor: '#ddd', color: 'white' }
+    },
+    {
+      text: 'long text',
+      onPress: () => console.log('delete'),
+      className: 'btnClass'
+    }
+  ];
+
+  left = [
+    {
+      text: 'Reply',
+      onPress: () => console.log('reply'),
+      style: { backgroundColor: '#108ee9', color: 'white' }
+    },
+    {
+      text: 'Cancel',
+      onPress: () => console.log('cancel'),
+      style: { backgroundColor: '#ddd', color: 'white' }
+    }
+  ];
+
+  open() {
+    console.log('open');
+  }
+
+  close() {
+    console.log('close');
+  }
+
+  click() {
+    console.log('clicked!');
+  }
+
+  itemClick() {
+    console.log('ListItem clicked!');
+  }
   pageLimit = 7;
   public directionCount = 0;
   page = 0;
@@ -56,7 +110,7 @@ export class HealthDataComponent implements OnInit {
 
   pullToRefresh(event) {
     if (event === 'endReachedRefresh') {
-        if (this.page < 9) {
+        if (this.page < 6) {
           this.page++;
           this.addItems(this.page * this.pageLimit);
           this.state.refreshState.currentState = 'release';
@@ -70,7 +124,7 @@ export class HealthDataComponent implements OnInit {
         this.page = 0;
         this.addItems(0);
       } else {
-        if (this.page < 9) {
+        if (this.page < 6) {
           this.page++;
           this.addItems(this.page * this.pageLimit);
         }

@@ -8,18 +8,23 @@
                 <div class="bloodList">
 
                     <span class="contenttitle">测量结果</span>
-                    <div class="blooditem" *ngFor="let i of this.state.data">
-                        <Icon class="itemicon" [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
-                        <div class="itemRight">
-                            <span class="itemTime">2019.08.09 19:00</span>
-                            <div class="itemContent">
-                                <span>133/100mmhg</span>
-                                <span>88bpm</span>
-                                <span>2级高血压</span>
-                            </div>
-                        </div>
-                    </div>
-
+                    <List>
+                        <SwipeAction *ngFor="let i of this.state.data" style="background-color: #fff" [right]="right" [left]="left" (onOpen)="open()" (onClose)="close()">
+                            <ListItem>
+                                <div class="blooditem">
+                                    <Icon class="itemicon" [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
+                                    <div class="itemRight">
+                                        <span class="itemTime">2019.08.09 19:00</span>
+                                        <div class="itemContent">
+                                            <span>133/100mmhg</span>
+                                            <span>88bpm</span>
+                                            <span>2级高血压</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ListItem>
+                        </SwipeAction>
+                    </List>
                 </div>
             </div>
         </PullToRefresh>
