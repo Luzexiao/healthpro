@@ -8,14 +8,15 @@ import { Router } from '@angular/router';
 export class HealthDataComponent implements OnInit {
   isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(window.navigator.userAgent);
   right = [
+    // {
+    //   text: 'Cancel',
+    //   onPress: () => console.log('cancel'),
+    //   style: { backgroundColor: '#ddd', color: 'white' }
+    // },
     {
-      text: 'Cancel',
-      onPress: () => console.log('cancel'),
-      style: { backgroundColor: '#ddd', color: 'white' }
-    },
-    {
-      text: 'Delete',
+      text: '删除',
       onPress: () => console.log('delete'),
+      style: { backgroundColor: 'red', color: '#fff' },
       className: 'btnClass'
     }
   ];

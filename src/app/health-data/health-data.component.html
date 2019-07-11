@@ -1,7 +1,7 @@
-<Tabs [activeTab]="index" [page]="3" [swipeable]="false">
+<Tabs [activeTab]="index" [page]="3" [swipeable]="false" style="height:auto">
 
     <TabPane [title]="'血压'">
-        <PullToRefresh style="width:100%;height:calc(90vh);" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
+        <PullToRefresh style="width:100%;height:calc(85vh);" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
             <div class="tabContent">
                 <div echarts [options]="chartOption" class="demo-chart"></div>
                 <div class="blackSpace"></div>
@@ -9,7 +9,7 @@
 
                     <span class="contenttitle">测量结果</span>
                     <List>
-                        <SwipeAction *ngFor="let i of this.state.data" style="background-color: #fff" [right]="right" [left]="left" (onOpen)="open()" (onClose)="close()">
+                        <SwipeAction *ngFor="let i of this.state.data" style="background-color: #fff" [right]="right" (onOpen)="open()" (onClose)="close()">
                             <ListItem>
                                 <div class="blooditem">
                                     <Icon class="itemicon" [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
