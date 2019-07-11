@@ -1,10 +1,12 @@
-<Tabs style="height: auto;" [activeTab]="index" [page]="3">
+<Tabs [activeTab]="index" [page]="3" [swipeable]="false">
+
     <TabPane [title]="'血压'">
-        <div class="tabContent">
-            <div echarts [options]="chartOption" class="demo-chart"></div>
-            <div class="blackSpace"></div>
-            <div class="bloodList">
-                <PullToRefresh style="width:100%;" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
+        <PullToRefresh style="width:100%;height:calc(88vh);" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
+            <div class="tabContent">
+                <div echarts [options]="chartOption" class="demo-chart"></div>
+                <div class="blackSpace"></div>
+                <div class="bloodList">
+
                     <span class="contenttitle">测量结果</span>
                     <div class="blooditem" *ngFor="let i of this.state.data">
                         <Icon class="itemicon" [type]="'check-circle'" [color]="'#1296db'" [size]="'xxs'"></Icon>
@@ -17,13 +19,15 @@
                             </div>
                         </div>
                     </div>
-                </PullToRefresh>
-                <ng-template #loading>
-                    <Icon type="loading"></Icon>
-                </ng-template>
+
+                </div>
             </div>
-        </div>
+        </PullToRefresh>
+        <ng-template #loading>
+            <Icon type="loading"></Icon>
+        </ng-template>
     </TabPane>
+
     <TabPane [title]="'三合一'">
         <div class="tabContent">
             Content of second tab

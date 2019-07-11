@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class HealthDataComponent implements OnInit {
   isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(window.navigator.userAgent);
-  pageLimit = 10;
+  pageLimit = 7;
   public directionCount = 0;
   page = 0;
   state = {
