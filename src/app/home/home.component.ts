@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   unselectedTintColor: string = '#888';
   tabbarStyle: object = {
     position: 'fixed',
-    height: '45px',
+    height: '55px',
     width: '100%',
     bottom:0
   };
