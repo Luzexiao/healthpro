@@ -1,7 +1,7 @@
 <Tabs [activeTab]="index" [page]="3" [swipeable]="false">
 
     <TabPane [title]="'血压'">
-        <PullToRefresh style="width:100%;height:calc(88vh);" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
+        <PullToRefresh style="width:100%;height:calc(90vh);" [direction]="state.direction" [(ngModel)]="state.refreshState" [endReachedRefresh]="state.endReachedRefresh" (onRefresh)="pullToRefresh($event)">
             <div class="tabContent">
                 <div echarts [options]="chartOption" class="demo-chart"></div>
                 <div class="blackSpace"></div>
